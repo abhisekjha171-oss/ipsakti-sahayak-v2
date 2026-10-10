@@ -238,7 +238,7 @@ gemini = load_gemini()
 def ask_llm(prompt: str):
     for attempt in range(3):
         try:
-            r = gemini.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+            r = gemini.models.generate_content(model="gemini-3.8-flash", contents=prompt)
             return r.text, "Gemini (online)"
         except Exception:
             if attempt < 2:
